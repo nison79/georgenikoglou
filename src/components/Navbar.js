@@ -7,22 +7,24 @@ import styled from 'styled-components'
 const Navbar =() => {
 
   const data = useStaticQuery(graphql`
-    query Images {
-    images : allFile( filter: { relativeDirectory: { eq: "gallery" }}){
-      nodes {
-        id
-      }
-    }
+    query Image {
+    # images : allFile( filter: { relativeDirectory: { eq: "gallery" }}){
+    #   nodes {
+    #     id
+    #     childImageSharp {
+    #       fixed(width:200){
+    #         ...GatsbyImageSharpFixed
+    #       }
+    #     }
+    #   }
+    # }
 
     image :file(relativePath: {eq: "logo.png"}) {
     childImageSharp {
       fixed(
-        width:220
+        width:180
       ) {
         ...GatsbyImageSharpFixed
-      }
-      fluid {
-        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -39,7 +41,7 @@ console.log(data);
       />
       <UnorderList>
         <LiItems>
-          <Link to="family">Family</Link>
+          <Link to="black-white">Black/White</Link>
         </LiItems>
 
         <LiItems>
@@ -71,9 +73,10 @@ export default Navbar
 const Nav = styled.nav`
   display:flex;
   flex-direction:column;
-  background-color:lightblue;
-  width:300px;
+  /* background-color:lightblue; */
+  width:200px;
   height:100vh;
+  padding:2rem 1rem;
   /* justify-content:space-between; */
 `
 
@@ -83,13 +86,14 @@ const UnorderList = styled.ul`
   justify-content:flex-start;
   list-style-type:none;
   width:150px;
+  margin-top:3rem;
 
 `
 
 const LiItems = styled.li`
-
-  margin-bottom:0.5rem;
-  background-color:lightgrey;
+  font-family:'Questrial';
+  margin-bottom:1.5rem;
+  /* background-color:lightgrey; */
   a {
     text-decoration:none;
   }
