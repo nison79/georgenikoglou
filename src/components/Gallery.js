@@ -11,7 +11,7 @@ const Gallery = () => {
       nodes {
         id
         childImageSharp {
-          fixed (width:500 height:500 ){
+          fixed (width:400, height:400 ,quality:100){
             ...GatsbyImageSharpFixed
           }
         }
@@ -24,7 +24,7 @@ const Gallery = () => {
     <div>
       
       <GalleryContent>
-      <h1>BW</h1>
+      
         {data.images.nodes.map(image => (
           <Img
           fadeIn
@@ -42,7 +42,7 @@ export default Gallery
 const GalleryContent = styled.div`
   max-width:100%;
   Img {
-    padding:1rem;
+    padding:2rem;
   }
   h1{
     margin-left:1rem;

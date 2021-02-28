@@ -19,10 +19,10 @@ const Navbar =() => {
     #   }
     # }
 
-    image :file(relativePath: {eq: "logo.png"}) {
+    image :file(relativePath: {eq: "logobig.png"}) {
     childImageSharp {
       fixed(
-        width:180
+        width:150 ,quality:100
       ) {
         ...GatsbyImageSharpFixed
       }
@@ -34,34 +34,36 @@ const Navbar =() => {
 console.log(data);
   return (
     <Nav>
+    <Link to="/">
       <Img 
         fixed={data.image.childImageSharp.fixed}
         alt="logo"
         
       />
+      </Link>
       <UnorderList>
         <LiItems>
-          <Link to="black-white">Black/White</Link>
+          <Link to="/black-white">Black/White</Link>
         </LiItems>
 
         <LiItems>
-          <Link to="street">Street</Link>
+          <Link to="/street">Street</Link>
         </LiItems>
 
         <LiItems>
-          <Link to="portrait">Portrait</Link>
+          <Link to="/portrait">Portrait</Link>
         </LiItems>
 
         <LiItems>
-          <Link to="bio">Bio</Link>
+          <Link to="/bio">Bio</Link>
         </LiItems>
 
         <LiItems>
-          <Link to="journal">Journal</Link>
+          <Link to="/journal">Journal</Link>
         </LiItems>
 
         <LiItems>
-          <Link to="contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </LiItems>
       </UnorderList>
     </Nav>
@@ -74,25 +76,33 @@ const Nav = styled.nav`
   display:flex;
   flex-direction:column;
   /* background-color:lightblue; */
-  width:200px;
-  height:100vh;
-  padding:2rem 1rem;
-  /* justify-content:space-between; */
+  width:150px;
+  height:50vh;
+  padding:1rem 1rem;
+  justify-content:space-around;
 `
 
 const UnorderList = styled.ul`
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
+  display:block;
   list-style-type:none;
   width:150px;
-  margin-top:3rem;
+  margin-top:1rem;
+  padding:0;
+  /* background-color:lightblue; */
+  a {
+    text-decoration:none;
+    color:black;
+    font-size:1.5rem;
+
+  }
 
 `
 
 const LiItems = styled.li`
   font-family:'Questrial';
+  align-items:center;
   margin-bottom:1.5rem;
+  margin-left:0rem;
   /* background-color:lightgrey; */
   a {
     text-decoration:none;

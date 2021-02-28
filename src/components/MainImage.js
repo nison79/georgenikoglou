@@ -6,9 +6,9 @@ import styled from 'styled-components'
 const MainImage = () => {
   const data = useStaticQuery(graphql`
     query MainImage {
-  image: file(relativePath: {eq: "main.jpg"}) {
+  image: file(relativePath: {eq: "main2.jpg"}) {
     childImageSharp {
-      fluid(maxWidth:1500, quality:100) {
+      fluid(maxWidth:1800, quality:100) {
         src
         ...GatsbyImageSharpFluid
       }
@@ -34,5 +34,7 @@ const MainImage = () => {
 export default MainImage
 
 const Container = styled.div`
+  max-width:1500px;
   width:100%;
+  margin: 0 auto;
 `
