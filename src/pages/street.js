@@ -38,7 +38,7 @@ const Text = styled.p`
   max-width:700px;
   font-family:'Poppins';
   font-size:1rem;
-  margin-left:2.2rem;
+  margin-left:1rem;
 `
 
 const Box = styled.div`

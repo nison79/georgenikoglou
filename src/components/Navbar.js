@@ -79,7 +79,14 @@ const Nav = styled.nav`
   width:150px;
   height:50vh;
   padding:1rem 1rem;
+  margin-right:7rem;
   justify-content:space-around;
+  @media(max-width:791px){
+    margin-right:4rem;
+  }
+  @media(max-width:690px){
+    margin-right:2rem;
+  }
 `
 
 const UnorderList = styled.ul`
@@ -96,6 +103,8 @@ const UnorderList = styled.ul`
 
   }
 
+  
+
 `
 
 const LiItems = styled.li`
@@ -106,6 +115,12 @@ const LiItems = styled.li`
   /* background-color:lightgrey; */
   a {
     text-decoration:none;
+  }
+  :nth-child(4) {
+    margin-top:5rem;
+  }
+  :nth-child(3) {
+    margin-bottom:10rem;
   }
 
 `

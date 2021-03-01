@@ -1,23 +1,23 @@
 import React from 'react'
-import BlackAndWhiteGallery from '../components/BlackAndWhiteGallery'
+import PortraitGallery from '../components/PortraitGallery'
 import styled from 'styled-components'
 import Navbar from '../components/Navbar'
 
 
-export const BlackWhite = () => {
+export const Portrait = () => {
   return (
       <Container>
         <Navbar />
           <Box>
-            <Text>In order to maintain the positive style to create images that captures something from this world, is crucial to limit our selves to the basic .</Text>
-            <BlackAndWhiteGallery />
+            <Text>People's faces are a universe to explore. The expression of their eyes, the pose of the body, the position and distance from the camera can vary in many ways but the thing that is permanent is the instant moment when you can catch their beauty.  </Text>
+            <PortraitGallery />
           </Box>
       </Container>
     
   )
 }
 
-export default BlackWhite
+export default Portrait
 
 const Container = styled.div`
   display:flex;
@@ -35,7 +35,7 @@ const Container = styled.div`
 // `
 
 const Text = styled.p`
-  max-width:400px;
+  max-width:600px;
   font-family:'Poppins';
   font-size:1rem;
   margin-left:1rem;

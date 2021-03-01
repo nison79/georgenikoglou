@@ -4,10 +4,10 @@ import Img from 'gatsby-image/withIEPolyfill'
 import styled from 'styled-components'
 
 
-const BlackAndWhiteGallery = () => {
+const PortraitGallery = () => {
   const data = useStaticQuery(graphql`
-    query Images {
-    images : allFile( filter: { relativeDirectory: { eq: "gallery-black_white" }}){
+    query PortraitImages {
+    images : allFile( filter: { relativeDirectory: { eq: "gallery-portrait" }}){
       nodes {
         id
         childImageSharp {
@@ -37,15 +37,12 @@ const BlackAndWhiteGallery = () => {
   )
 }
 
-export default BlackAndWhiteGallery
+export default PortraitGallery
 
 const GalleryContent = styled.div`
   max-width:100%;
   Img {
     padding:0.5rem;
-  &:hover{
-    opacity:0.5;
-  }
   }
   h1{
     margin-left:1rem;
