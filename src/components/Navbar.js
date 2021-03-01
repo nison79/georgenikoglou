@@ -92,7 +92,7 @@ const UnorderList = styled.ul`
   a {
     text-decoration:none;
     color:black;
-    font-size:1.5rem;
+    font-size:1.2rem;
 
   }
 

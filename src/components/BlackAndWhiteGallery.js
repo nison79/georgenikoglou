@@ -4,7 +4,7 @@ import Img from 'gatsby-image/withIEPolyfill'
 import styled from 'styled-components'
 
 
-const Gallery = () => {
+const BlackAndWhiteGallery = () => {
   const data = useStaticQuery(graphql`
     query Images {
     images : allFile( filter: { relativeDirectory: { eq: "gallery" }}){
@@ -37,12 +37,12 @@ const Gallery = () => {
   )
 }
 
-export default Gallery
+export default BlackAndWhiteGallery
 
 const GalleryContent = styled.div`
   max-width:100%;
   Img {
-    padding:2rem;
+    padding:0.5rem;
   }
   h1{
     margin-left:1rem;
