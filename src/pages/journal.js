@@ -22,7 +22,7 @@ const Container = styled.div`
   /* align-items:center; */
   /* justify-content:space-around; */
   min-height:100vh;
-  background-color:lightpink;
+  
 
 `
 
@@ -46,6 +46,8 @@ const Text = styled.p`
 `
 
 const Box = styled.div`
+width:100%;
+background-color:lightpink;   
   display:flex;
   flex-direction:row;
   margin: 0 auto;

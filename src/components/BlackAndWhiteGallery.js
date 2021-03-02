@@ -11,7 +11,7 @@ const BlackAndWhiteGallery = () => {
       nodes {
         id
         childImageSharp {
-          fixed (width:400, height:400 ,quality:100){
+          fixed (width:400, height:400 ,quality:100, fit:COVER){
             ...GatsbyImageSharpFixed
           }
         }

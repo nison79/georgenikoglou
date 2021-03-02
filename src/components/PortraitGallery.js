@@ -4,6 +4,8 @@ import Img from 'gatsby-image/withIEPolyfill'
 import styled from 'styled-components'
 
 
+
+
 const PortraitGallery = () => {
   const data = useStaticQuery(graphql`
     query PortraitImages {
@@ -11,14 +13,17 @@ const PortraitGallery = () => {
       nodes {
         id
         childImageSharp {
-          fixed (width:400, height:400 ,quality:100){
+          fixed (width:500, height:379 ,quality:100,fit:COVER){
             ...GatsbyImageSharpFixed
           }
         }
       }
     }
+    
   }
+  
   `)
+
 
   return (
     <div>
