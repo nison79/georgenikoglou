@@ -34,6 +34,7 @@ const Navbar = ( { primary }) => {
 console.log(data);
   return (
     <Nav>
+
     <Link to="/">
       <Img 
         fixed={data.image.childImageSharp.fixed}
@@ -41,6 +42,7 @@ console.log(data);
         
       />
       </Link>
+
       <UnorderList>
         <LiItems >
           <Link primary = {primary} to="/black-white">Black/White</Link>
@@ -53,6 +55,9 @@ console.log(data);
         <LiItems>
           <Link to="/portrait">Portrait</Link>
         </LiItems>
+        <br/>
+        <br/>
+        <br/>
 
         <LiItems>
           <Link to="/bio">Bio</Link>
@@ -75,12 +80,17 @@ export default Navbar
 const Nav = styled.nav`
   display:flex;
   flex-direction:column;
+  justify-content:space-between;
   /* background-color:lightblue; */
   width:100px;
-  height:50vh;
+  height:100vh;
   padding:1rem 1rem;
-  margin-right:7rem;
-  justify-content:space-around;
+  margin-right:8rem;
+
+  a {
+    position:fixed;
+  }
+
   @media(max-width:791px){
     margin-right:3rem;
   }
@@ -90,11 +100,13 @@ const Nav = styled.nav`
 `
 
 const UnorderList = styled.ul`
+  position:fixed;
   display:block;
   list-style-type:none;
   width:150px;
-  margin-top:1rem;
+  margin-top:8rem;
   padding:0;
+ 
   /* background-color:lightblue; */
   a {
     text-decoration:none;
@@ -108,10 +120,30 @@ const UnorderList = styled.ul`
 `
 
 const LiItems = styled.li`
+  text-transform:uppercase;
+  padding: .8em 0 .8em .8em;
+  cursor:pointer;
+  position:relative;
+  border-radius: 88% 12% 57% 43% / 24% 69% 31% 76% ;
+  transition: border-radius 1s;
   font-family:'Questrial';
   align-items:center;
-  margin-bottom:1.5rem;
+  margin-bottom:4rem;
   margin-left:0rem; 
+
+  &:before {
+    position:absolute;
+    content: '';
+    width:0;
+    border-bottom:2px solid black;
+    top:1em;
+    transition: width 1s;
+  }
+
+  &:hover{
+    border:2px solid grey;
+    border-radius:74% 26% 81% 19% / 52% 85% 15% 48% 
+  }
   
   /* background-color:lightgrey; */
   a {
@@ -119,11 +151,11 @@ const LiItems = styled.li`
     
     
   }
-  :nth-child(4) {
-    margin-top:5rem;
-  }
+  /* :nth-child(4) {
+    margin-top:8rem;
+  } */
   :nth-child(3) {
-    margin-bottom:10rem;
+    margin-bottom:40rem;
   }
 
 `
