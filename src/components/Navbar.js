@@ -4,7 +4,7 @@ import { graphql , useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-const Navbar =() => {
+const Navbar = ( { primary }) => {
 
   const data = useStaticQuery(graphql`
     query Image {
@@ -22,7 +22,7 @@ const Navbar =() => {
     image :file(relativePath: {eq: "logobig.png"}) {
     childImageSharp {
       fixed(
-        width:150 ,quality:100
+        width:120 ,quality:100
       ) {
         ...GatsbyImageSharpFixed
       }
@@ -42,8 +42,8 @@ console.log(data);
       />
       </Link>
       <UnorderList>
-        <LiItems>
-          <Link to="/black-white">Black/White</Link>
+        <LiItems >
+          <Link primary = {primary} to="/black-white">Black/White</Link>
         </LiItems>
 
         <LiItems>
@@ -76,13 +76,13 @@ const Nav = styled.nav`
   display:flex;
   flex-direction:column;
   /* background-color:lightblue; */
-  width:150px;
+  width:100px;
   height:50vh;
   padding:1rem 1rem;
   margin-right:7rem;
   justify-content:space-around;
   @media(max-width:791px){
-    margin-right:4rem;
+    margin-right:3rem;
   }
   @media(max-width:690px){
     margin-right:2rem;
@@ -111,10 +111,13 @@ const LiItems = styled.li`
   font-family:'Questrial';
   align-items:center;
   margin-bottom:1.5rem;
-  margin-left:0rem;
+  margin-left:0rem; 
+  
   /* background-color:lightgrey; */
   a {
     text-decoration:none;
+    
+    
   }
   :nth-child(4) {
     margin-top:5rem;

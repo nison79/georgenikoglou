@@ -11,8 +11,9 @@ const StreetGallery = () => {
       nodes {
         id
         childImageSharp {
-          fixed (width:400, height:400 ,quality:100, fit:COVER){
-            ...GatsbyImageSharpFixed
+          fluid (maxWidth:2000 ,quality:100,fit:COVER){
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -29,7 +30,7 @@ const StreetGallery = () => {
           <Img
           fadeIn
           key={image.id} 
-          fixed={image.childImageSharp.fixed} />
+          fluid={image.childImageSharp.fluid} />
         ))}
       </GalleryContent>
 
@@ -40,9 +41,9 @@ const StreetGallery = () => {
 export default StreetGallery
 
 const GalleryContent = styled.div`
-  max-width:100%;
+
   Img {
-    padding:0.9rem;
+    padding:1rem;
   }
   h1{
     margin-left:1rem;
@@ -51,3 +52,4 @@ const GalleryContent = styled.div`
     letter-spacing:-2px;
   }
 `
+

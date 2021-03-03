@@ -20,8 +20,8 @@ export const Portrait = () => {
 export default Portrait
 
 const Container = styled.div`
+
   display:flex;
-  justify-content:space-between;
 
 `
 
@@ -44,5 +44,6 @@ const Text = styled.p`
 const Box = styled.div`
   display:flex;
   flex-direction:column;
+  width:100%;
 `
 

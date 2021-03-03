@@ -11,8 +11,9 @@ const BlackAndWhiteGallery = () => {
       nodes {
         id
         childImageSharp {
-          fixed (width:400, height:400 ,quality:100, fit:COVER){
-            ...GatsbyImageSharpFixed
+          fluid (maxWidth:2000 ,quality:100,fit:COVER){
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -29,7 +30,7 @@ const BlackAndWhiteGallery = () => {
           <Img
           fadeIn
           key={image.id} 
-          fixed={image.childImageSharp.fixed} />
+          fluid={image.childImageSharp.fluid} />
         ))}
       </GalleryContent>
 
@@ -40,12 +41,8 @@ const BlackAndWhiteGallery = () => {
 export default BlackAndWhiteGallery
 
 const GalleryContent = styled.div`
-  max-width:100%;
   Img {
-    padding:0.5rem;
-  &:hover{
-    opacity:0.5;
-  }
+    padding:1rem;
   }
   h1{
     margin-left:1rem;

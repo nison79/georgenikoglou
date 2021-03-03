@@ -6,9 +6,9 @@ import styled from 'styled-components'
 const MainImage = () => {
   const data = useStaticQuery(graphql`
     query MainImage {
-  image: file(relativePath: {eq: "main2.jpg"}) {
+  image: file(relativePath: {eq: "main3.jpg"}) {
     childImageSharp {
-      fluid(maxWidth:1800, quality:100) {
+      fluid(maxWidth:2000, quality:100) {
         src
         ...GatsbyImageSharpFluid
       }

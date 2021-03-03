@@ -44,5 +44,5 @@ const Text = styled.p`
 const Box = styled.div`
   display:flex;
   flex-direction:column;
+  width:100%;
 `
-

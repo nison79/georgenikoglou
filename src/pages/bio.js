@@ -30,25 +30,26 @@ const Title = styled.h2`
   font-family:'Poppins';
   font-weight: 500;
   font-size:2.3rem;
-  margin-right:6rem;
-  margin-top:20rem;
+  margin-right:3rem;
+  margin-left:3rem;
+  margin-top:13rem;
   
 `
 
 const Text = styled.p`
   max-width:500px;
   font-family:'Poppins';
-  font-size:1.2rem;
+  font-size:1rem;
   margin-right:6rem;
-  margin-top:20rem;
+  margin-top:13.5rem;
   /* margin: 0 auto; */
-
 `
 
 const Box = styled.div`
-  width:100%;
+  width:800px;
   background-color:#892881;
   display:flex;
   flex-direction:row;
+  justify-content:flex-start;
   margin: 0 auto;
 `

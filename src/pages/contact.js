@@ -9,7 +9,12 @@ const Contact = () => {
         <Navbar />
           <Box>
             <Title>Contact</Title>
-            <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, eligendi minima. Nulla in repudiandae assumenda, laborum est a laboriosam mollitia facere optio excepturi? Dolorem minima sapiente at tenetur deserunt debitis, ex impedit doloribus blanditiis hic iure. Illum ut in ipsa.</Text>
+            <Box2>
+              <TitleText>Feel free to reach me </TitleText>
+              <Text>Email: georgenison@gmail.com</Text>
+              <Text>Address: P.Dimitriou 20 Arkadikos Drama/Greece</Text>
+              <Text>Mobile: 6945419898</Text>
+            </Box2>
           </Box>
     </Container>
   )
@@ -22,34 +27,51 @@ const Container = styled.div`
   /* align-items:center; */
   /* justify-content:space-around; */
   min-height:100vh;
-  
 
 `
 
 const Title = styled.h2`
+  color:white;
   font-family:'Poppins';
-  font-weight: 500;
-  font-size:2.3rem;
-  margin-right:6rem;
-  margin-top:20rem;
+  font-weight: 900;
+  font-size:1.5rem;
+  margin-right:3rem;
+  margin-left:1rem;
+  margin-top:1rem;
   
 `
 
 const Text = styled.p`
+  color:white;
   max-width:500px;
   font-family:'Poppins';
-  font-size:1.2rem;
-  margin-right:6rem;
-  margin-top:20rem;
+  font-size:1rem;
+  margin:0;
+  margin-top:0.5rem;
+  
   /* margin: 0 auto; */
-
 `
 
 const Box = styled.div`
-  width:100%;
-  background-color:lightgrey;
+  width:800px;
+  background-color:#892881;
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
+  justify-content:flex-start;
   margin: 0 auto;
-  
+`
+
+const Box2 = styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  padding:7rem;
+`
+
+const TitleText = styled.h2`
+  margin:0;
+  color:white;
+  font-family:'Poppins';
+  font-size:2rem;
+  font-weight: 900;
 `
