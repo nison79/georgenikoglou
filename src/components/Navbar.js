@@ -19,7 +19,7 @@ const Navbar = ( { primary }) => {
     #   }
     # }
 
-    image :file(relativePath: {eq: "logo2.png"}) {
+    image :file(relativePath: {eq: "logo3.png"}) {
     childImageSharp {
       fixed(
         width:150 ,quality:100
@@ -34,14 +34,14 @@ const Navbar = ( { primary }) => {
 console.log(data);
   return (
     <Nav>
-
-    <Link to="/">
-      <Img 
-        fixed={data.image.childImageSharp.fixed}
-        alt="logo"
-        
-      />
-      </Link>
+      
+        <Link to="/">
+          <Img
+            fixed={data.image.childImageSharp.fixed}
+            alt="logo"
+            
+          />
+        </Link>
 
       <UnorderList>
         <LiItems >
@@ -129,7 +129,12 @@ const LiItems = styled.li`
     font-family:'Poppins';
     font-weight:400;
     font-size:1.2rem;
-    color:#123A6B;
+    color:black;
+    :hover {
+      animation: matrix 4s ease-in-out ; 
+      transform: matrix(0.9, 0.1, 0.1, 1, 0.2, 0.5);
+      
+    }
     
     
   }

@@ -39,7 +39,7 @@ const Text = styled.p`
   font-family:'Poppins';
   font-size:1rem;
   margin-left:1rem;
-  color:#123A6B;
+  
 `
 
 const Box = styled.div`

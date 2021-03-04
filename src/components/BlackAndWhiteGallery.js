@@ -11,7 +11,7 @@ const BlackAndWhiteGallery = () => {
       nodes {
         id
         childImageSharp {
-          fluid (maxWidth:1000 ,quality:100,fit:COVER){
+          fluid (maxWidth:1500 ,quality:100,fit:COVER){
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -43,7 +43,7 @@ export default BlackAndWhiteGallery
 const GalleryContent = styled.div`
   max-width:100%;
   display:grid;
-  grid-template-columns:auto auto;
+  grid-template-columns:1fr 1fr;
 
   img{
     padding:1rem;
