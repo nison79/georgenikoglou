@@ -41,9 +41,13 @@ const StreetGallery = () => {
 export default StreetGallery
 
 const GalleryContent = styled.div`
+  max-width:100%;
+  display:grid;
+  grid-template-columns:auto auto;
 
-  Img {
+  img{
     padding:1rem;
+    
   }
   h1{
     margin-left:1rem;
@@ -52,4 +56,3 @@ const GalleryContent = styled.div`
     letter-spacing:-2px;
   }
 `
-

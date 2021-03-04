@@ -13,7 +13,7 @@ const PortraitGallery = () => {
       nodes {
         id
         childImageSharp {
-          fluid (maxWidth:1000,quality:100,fit:COVER){
+          fluid (maxWidth:1400,quality:100,fit:COVER){
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -47,10 +47,13 @@ const PortraitGallery = () => {
 export default PortraitGallery
 
 const GalleryContent = styled.div`
-max-width:80%;
+  max-width:100%;
+  display:grid;
+  grid-template-columns:auto auto;
 
-  Img {
+  img{
     padding:1rem;
+    
   }
   h1{
     margin-left:1rem;

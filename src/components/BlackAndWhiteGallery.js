@@ -41,13 +41,12 @@ const BlackAndWhiteGallery = () => {
 export default BlackAndWhiteGallery
 
 const GalleryContent = styled.div`
-  Img {
+  max-width:100%;
+  display:grid;
+  grid-template-columns:auto auto;
+
+  img{
     padding:1rem;
-  }
-  h1{
-    margin-left:1rem;
-    font-size:4rem;
-    font-family:'Questrial';
-    letter-spacing:-2px;
+    
   }
 `
