@@ -41,6 +41,7 @@ const Text = styled.p`
   font-size:1rem;
   margin-right:6rem;
   margin-top:13.5rem;
+  color:#123A6B;
   /* margin: 0 auto; */
 `
 

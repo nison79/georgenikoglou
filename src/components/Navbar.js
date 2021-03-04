@@ -19,10 +19,10 @@ const Navbar = ( { primary }) => {
     #   }
     # }
 
-    image :file(relativePath: {eq: "logobig.png"}) {
+    image :file(relativePath: {eq: "logo2.png"}) {
     childImageSharp {
       fixed(
-        width:120 ,quality:100
+        width:150 ,quality:100
       ) {
         ...GatsbyImageSharpFixed
       }
@@ -127,8 +127,9 @@ const LiItems = styled.li`
   a {
     text-decoration:none;
     font-family:'Poppins';
-    font-weight:200;
-    font-size:1rem;
+    font-weight:400;
+    font-size:1.2rem;
+    color:#123A6B;
     
     
   }

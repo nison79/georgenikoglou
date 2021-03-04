@@ -13,7 +13,7 @@ const PortraitGallery = () => {
       nodes {
         id
         childImageSharp {
-          fluid (maxWidth:1400,quality:100,fit:COVER){
+          fluid (maxWidth:1800,quality:100,fit:COVER){
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
