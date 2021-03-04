@@ -13,7 +13,7 @@ const PortraitGallery = () => {
       nodes {
         id
         childImageSharp {
-          fluid (maxWidth:2000 ,quality:100,fit:COVER){
+          fluid (maxWidth:1000,quality:100,fit:COVER){
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -33,7 +33,8 @@ const PortraitGallery = () => {
       
         {data.images.nodes.map(image => (
           <Img
-          fadeIn
+          // fadeIn
+          // durationFadeIn={2000}
           key={image.id} 
           fluid={image.childImageSharp.fluid} />
         ))}
@@ -46,7 +47,8 @@ const PortraitGallery = () => {
 export default PortraitGallery
 
 const GalleryContent = styled.div`
-max-width:100%;
+max-width:80%;
+
   Img {
     padding:1rem;
   }

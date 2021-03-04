@@ -11,7 +11,7 @@ const StreetGallery = () => {
       nodes {
         id
         childImageSharp {
-          fluid (maxWidth:2000 ,quality:100,fit:COVER){
+          fluid (maxWidth:1000 ,quality:100,fit:COVER){
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
